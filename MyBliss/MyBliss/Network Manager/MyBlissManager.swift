@@ -17,7 +17,7 @@ class MyBlissManager:APIServiceProtocol {
     static let defaultManager = MyBlissManager()
     
     func fetchData(completionHandler:@escaping (_ episodes: [Episodes]?, _ error: Error?)->()){
-        let url = URL(string: "http://apidev.mybliss.ai/api/v1/dummy?page=1")
+        let url = URL(string: BlissAPI.fetchEpisodesAPI(page: 1))
         if let url = url {
             let request = URLRequest(url: url)
             let session = URLSession.shared
@@ -42,6 +42,20 @@ class MyBlissManager:APIServiceProtocol {
                 }
                 }.resume()
         }
+    }
+}
+
+// Construct URL.
+struct BlissAPI {
+    
+    // End Point URL
+    static func baseEndPoint() -> String {
+        return "http://apidev.mybliss.ai/api/v1/dummy?page="
+    }
+    
+    // Invoking API
+    static func fetchEpisodesAPI(page: Int) -> String {
+        return "\(self.baseEndPoint())\(page)"
     }
 }
 
