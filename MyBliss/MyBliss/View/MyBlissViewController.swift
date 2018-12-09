@@ -12,10 +12,36 @@ class MyBlissViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    lazy var viewModel: MyBlissViewModel = {
+        return MyBlissViewModel()
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.initialUiSetUp()
+        self.initialiseViewModel()
+    }
+    
+    func initialUiSetUp(){
+        
+    }
+    
+    func initialiseViewModel(){
+        // Native Binding View with View Model.
+        viewModel.reloadTableViewClosure = { [weak self] () in
+            
+            guard let weakSelf = self else { return }
+            
+            // Reload TableView after fetching data from Api on the Main Thread.
+            DispatchQueue.main.async {
+             weakSelf.tableView.reloadData()
+            }
+        }
+        
+        // Fetch Data from the service.
+        viewModel.initFetch()
     }
 }
 
