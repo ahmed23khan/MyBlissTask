@@ -15,6 +15,7 @@
 		968D676321BD59BD00507956 /* MyBlissTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D676221BD59BD00507956 /* MyBlissTests.swift */; };
 		968D676F21BD5BB100507956 /* MyBlissManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D676E21BD5BB100507956 /* MyBlissManager.swift */; };
 		968D677221BD647100507956 /* MyBliss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D677121BD647100507956 /* MyBliss.swift */; };
+		968D677621BD6C0D00507956 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D677521BD6C0D00507956 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		968D676421BD59BD00507956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		968D676E21BD5BB100507956 /* MyBlissManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlissManager.swift; sourceTree = "<group>"; };
 		968D677121BD647100507956 /* MyBliss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBliss.swift; sourceTree = "<group>"; };
+		968D677521BD6C0D00507956 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		968D674C21BD59BA00507956 /* MyBliss */ = {
 			isa = PBXGroup;
 			children = (
+				968D677421BD6BFC00507956 /* Constants */,
 				968D677021BD644D00507956 /* Model */,
 				968D676D21BD5B8200507956 /* Network Manager */,
 				968D674D21BD59BA00507956 /* AppDelegate.swift */,
@@ -116,6 +119,14 @@
 				968D677121BD647100507956 /* MyBliss.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		968D677421BD6BFC00507956 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				968D677521BD6C0D00507956 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				968D677621BD6C0D00507956 /* Constants.swift in Sources */,
 				968D676F21BD5BB100507956 /* MyBlissManager.swift in Sources */,
 				968D675021BD59BA00507956 /* ViewController.swift in Sources */,
 				968D674E21BD59BA00507956 /* AppDelegate.swift in Sources */,
