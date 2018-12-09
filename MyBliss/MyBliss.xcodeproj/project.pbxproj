@@ -13,6 +13,8 @@
 		968D675521BD59BD00507956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968D675421BD59BD00507956 /* Assets.xcassets */; };
 		968D675821BD59BD00507956 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968D675621BD59BD00507956 /* LaunchScreen.storyboard */; };
 		968D676321BD59BD00507956 /* MyBlissTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D676221BD59BD00507956 /* MyBlissTests.swift */; };
+		968D676F21BD5BB100507956 /* MyBlissManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D676E21BD5BB100507956 /* MyBlissManager.swift */; };
+		968D677221BD647100507956 /* MyBliss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D677121BD647100507956 /* MyBliss.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		968D675E21BD59BD00507956 /* MyBlissTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBlissTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		968D676221BD59BD00507956 /* MyBlissTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlissTests.swift; sourceTree = "<group>"; };
 		968D676421BD59BD00507956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		968D676E21BD5BB100507956 /* MyBlissManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlissManager.swift; sourceTree = "<group>"; };
+		968D677121BD647100507956 /* MyBliss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBliss.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 		968D674C21BD59BA00507956 /* MyBliss */ = {
 			isa = PBXGroup;
 			children = (
+				968D677021BD644D00507956 /* Model */,
+				968D676D21BD5B8200507956 /* Network Manager */,
 				968D674D21BD59BA00507956 /* AppDelegate.swift */,
 				968D674F21BD59BA00507956 /* ViewController.swift */,
 				968D675121BD59BA00507956 /* Main.storyboard */,
@@ -94,6 +100,22 @@
 				968D676421BD59BD00507956 /* Info.plist */,
 			);
 			path = MyBlissTests;
+			sourceTree = "<group>";
+		};
+		968D676D21BD5B8200507956 /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				968D676E21BD5BB100507956 /* MyBlissManager.swift */,
+			);
+			path = "Network Manager";
+			sourceTree = "<group>";
+		};
+		968D677021BD644D00507956 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				968D677121BD647100507956 /* MyBliss.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +219,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				968D676F21BD5BB100507956 /* MyBlissManager.swift in Sources */,
 				968D675021BD59BA00507956 /* ViewController.swift in Sources */,
 				968D674E21BD59BA00507956 /* AppDelegate.swift in Sources */,
+				968D677221BD647100507956 /* MyBliss.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
