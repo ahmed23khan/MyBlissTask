@@ -18,6 +18,8 @@
 		968D677621BD6C0D00507956 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D677521BD6C0D00507956 /* Constants.swift */; };
 		968D677921BD702600507956 /* MyBlissViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D677821BD702600507956 /* MyBlissViewController.swift */; };
 		968D677C21BD810000507956 /* MyBlissViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D677B21BD810000507956 /* MyBlissViewModel.swift */; };
+		968D678021BD883A00507956 /* MyBlissTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D677E21BD883900507956 /* MyBlissTableViewCell.swift */; };
+		968D678121BD883A00507956 /* MyBlissTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968D677F21BD883900507956 /* MyBlissTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		968D677521BD6C0D00507956 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		968D677821BD702600507956 /* MyBlissViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlissViewController.swift; sourceTree = "<group>"; };
 		968D677B21BD810000507956 /* MyBlissViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlissViewModel.swift; sourceTree = "<group>"; };
+		968D677E21BD883900507956 /* MyBlissTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlissTableViewCell.swift; sourceTree = "<group>"; };
+		968D677F21BD883900507956 /* MyBlissTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBlissTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 		968D677721BD6FFA00507956 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				968D677D21BD881F00507956 /* Custom Cell */,
 				968D677821BD702600507956 /* MyBlissViewController.swift */,
 			);
 			path = View;
@@ -149,6 +154,15 @@
 				968D677B21BD810000507956 /* MyBlissViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		968D677D21BD881F00507956 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				968D677E21BD883900507956 /* MyBlissTableViewCell.swift */,
+				968D677F21BD883900507956 /* MyBlissTableViewCell.xib */,
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +249,7 @@
 				968D675821BD59BD00507956 /* LaunchScreen.storyboard in Resources */,
 				968D675521BD59BD00507956 /* Assets.xcassets in Resources */,
 				968D675321BD59BA00507956 /* Main.storyboard in Resources */,
+				968D678121BD883A00507956 /* MyBlissTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +270,7 @@
 				968D677C21BD810000507956 /* MyBlissViewModel.swift in Sources */,
 				968D677921BD702600507956 /* MyBlissViewController.swift in Sources */,
 				968D677621BD6C0D00507956 /* Constants.swift in Sources */,
+				968D678021BD883A00507956 /* MyBlissTableViewCell.swift in Sources */,
 				968D676F21BD5BB100507956 /* MyBlissManager.swift in Sources */,
 				968D675021BD59BA00507956 /* ViewController.swift in Sources */,
 				968D674E21BD59BA00507956 /* AppDelegate.swift in Sources */,

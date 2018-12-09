@@ -25,7 +25,7 @@ class MyBlissViewController: UIViewController {
     }
     
     func initialUiSetUp(){
-        
+        self.registerNibs()
     }
     
     func initialiseViewModel(){
@@ -43,6 +43,10 @@ class MyBlissViewController: UIViewController {
         // Fetch Data from the service.
         viewModel.initFetch()
     }
+    
+    func registerNibs(){
+        self.tableView.register(MyBlissTableViewCell.nib, forCellReuseIdentifier: MyBlissTableViewCell.identifier)
+    }
 }
 
 extension MyBlissViewController: UITableViewDataSource {
@@ -53,7 +57,7 @@ extension MyBlissViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell : MyBlissTableViewCell = tableView.dequeueReusableCell(withIdentifier: MyBlissTableViewCell.identifier, for: indexPath) as! MyBlissTableViewCell
         cell.textLabel?.text = "Some Text"
         return cell
         
