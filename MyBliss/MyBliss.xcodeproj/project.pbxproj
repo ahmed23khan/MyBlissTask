@@ -17,6 +17,7 @@
 		968D677221BD647100507956 /* MyBliss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D677121BD647100507956 /* MyBliss.swift */; };
 		968D677621BD6C0D00507956 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D677521BD6C0D00507956 /* Constants.swift */; };
 		968D677921BD702600507956 /* MyBlissViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D677821BD702600507956 /* MyBlissViewController.swift */; };
+		968D677C21BD810000507956 /* MyBlissViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D677B21BD810000507956 /* MyBlissViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		968D677121BD647100507956 /* MyBliss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBliss.swift; sourceTree = "<group>"; };
 		968D677521BD6C0D00507956 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		968D677821BD702600507956 /* MyBlissViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlissViewController.swift; sourceTree = "<group>"; };
+		968D677B21BD810000507956 /* MyBlissViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlissViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		968D674C21BD59BA00507956 /* MyBliss */ = {
 			isa = PBXGroup;
 			children = (
+				968D677A21BD80C000507956 /* View Model */,
 				968D677721BD6FFA00507956 /* View */,
 				968D677421BD6BFC00507956 /* Constants */,
 				968D677021BD644D00507956 /* Model */,
@@ -138,6 +141,14 @@
 				968D677821BD702600507956 /* MyBlissViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		968D677A21BD80C000507956 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				968D677B21BD810000507956 /* MyBlissViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				968D677C21BD810000507956 /* MyBlissViewModel.swift in Sources */,
 				968D677921BD702600507956 /* MyBlissViewController.swift in Sources */,
 				968D677621BD6C0D00507956 /* Constants.swift in Sources */,
 				968D676F21BD5BB100507956 /* MyBlissManager.swift in Sources */,
