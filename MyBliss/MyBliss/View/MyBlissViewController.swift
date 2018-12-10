@@ -61,7 +61,8 @@ extension MyBlissViewController: UITableViewDataSource {
         
         let cellViewModel = viewModel.getCellViewModel(at: indexPath)
         cell.titleLabel.text = cellViewModel.title
-        cell.descriptionLabel.text = cellViewModel.description
+        cell.dateLabel.text = cellViewModel.date
+        cell.smallImage.loadImage(url: URL(string: cellViewModel.imageUrl)!)
         return cell
         
     }

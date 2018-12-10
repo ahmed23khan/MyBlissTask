@@ -50,9 +50,10 @@ class MyBlissViewModel {
     
     func createCellViewModel (_ episode: Episodes) -> EpisodeListViewModel {
         let title = episode.title
-        let description = episode.description
+        let date = episode.date
+        let imageUrl = episode.smallImageUrl
         
-        return EpisodeListViewModel(title: title, subtitle: "", description: description, imageUrl: "")
+        return EpisodeListViewModel(title: title, date: date, description: "", imageUrl: imageUrl)
     }
     
     private func configureFetchedEpisodes(_ episodes: [Episodes]){
@@ -68,7 +69,21 @@ class MyBlissViewModel {
 
 struct EpisodeListViewModel {
     let title: String
-    let subtitle: String
+    let date: String
     let description: String
     let imageUrl: String
+}
+
+extension UIImageView {
+    func loadImage(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
 }

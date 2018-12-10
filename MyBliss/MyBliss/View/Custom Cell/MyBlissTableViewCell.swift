@@ -11,7 +11,8 @@ import UIKit
 class MyBlissTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var smallImage: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +25,11 @@ class MyBlissTableViewCell: UITableViewCell {
     
     static var identifier: String {
         return String(describing: self)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.smallImage.image = nil
     }
     
 }
