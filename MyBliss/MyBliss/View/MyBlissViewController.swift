@@ -47,6 +47,17 @@ class MyBlissViewController: UIViewController {
     func registerNibs(){
         self.tableView.register(MyBlissTableViewCell.nib, forCellReuseIdentifier: MyBlissTableViewCell.identifier)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == StoryBoardConstants.SegueConstant {
+            let detailViewController = segue.destination as! MyBlissDetailViewController
+            if let episode = viewModel.selectedEpisode {
+                detailViewController.descriptionText = episode.description
+                detailViewController.largeUrl        = episode.imageUrl
+            }
+        }
+    }
+    
 }
 
 extension MyBlissViewController: UITableViewDataSource {
@@ -73,6 +84,15 @@ extension MyBlissViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200.0
+    }
+    
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        self.viewModel.userPressed(at: indexPath)
+        return indexPath
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: StoryBoardConstants.SegueConstant, sender: indexPath)
     }
     
 }

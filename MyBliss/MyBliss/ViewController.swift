@@ -13,13 +13,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.fetchData()
-    }
-    
-    func fetchData(){
-        MyBlissManager.defaultManager.fetchData { (episodes, error) in
-            print(episodes)
-        }
     }
 }
 

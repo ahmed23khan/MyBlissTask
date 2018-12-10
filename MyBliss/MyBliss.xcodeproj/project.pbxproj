@@ -20,6 +20,7 @@
 		968D677C21BD810000507956 /* MyBlissViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D677B21BD810000507956 /* MyBlissViewModel.swift */; };
 		968D678021BD883A00507956 /* MyBlissTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D677E21BD883900507956 /* MyBlissTableViewCell.swift */; };
 		968D678121BD883A00507956 /* MyBlissTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968D677F21BD883900507956 /* MyBlissTableViewCell.xib */; };
+		968D678321BEA7D400507956 /* MyBlissDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D678221BEA7D400507956 /* MyBlissDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		968D677B21BD810000507956 /* MyBlissViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlissViewModel.swift; sourceTree = "<group>"; };
 		968D677E21BD883900507956 /* MyBlissTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlissTableViewCell.swift; sourceTree = "<group>"; };
 		968D677F21BD883900507956 /* MyBlissTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBlissTableViewCell.xib; sourceTree = "<group>"; };
+		968D678221BEA7D400507956 /* MyBlissDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlissDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			children = (
 				968D677D21BD881F00507956 /* Custom Cell */,
 				968D677821BD702600507956 /* MyBlissViewController.swift */,
+				968D678221BEA7D400507956 /* MyBlissDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				968D676F21BD5BB100507956 /* MyBlissManager.swift in Sources */,
 				968D675021BD59BA00507956 /* ViewController.swift in Sources */,
 				968D674E21BD59BA00507956 /* AppDelegate.swift in Sources */,
+				968D678321BEA7D400507956 /* MyBlissDetailViewController.swift in Sources */,
 				968D677221BD647100507956 /* MyBliss.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

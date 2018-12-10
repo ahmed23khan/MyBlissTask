@@ -12,7 +12,7 @@ class MyBlissViewModel {
     
     let apiService: APIServiceProtocol
     
-    private var photos: [Episodes] = [Episodes]()
+    private var episodes: [Episodes] = [Episodes]()
 
     var reloadTableViewClosure: (()->())?
     
@@ -21,6 +21,8 @@ class MyBlissViewModel {
     var numberOfCells: Int {
         return cellViewModels.count
     }
+    
+    var selectedEpisode: Episodes?
     
     private var cellViewModels: [EpisodeListViewModel] = [EpisodeListViewModel]() {
         didSet {
@@ -49,20 +51,32 @@ class MyBlissViewModel {
     }
     
     func createCellViewModel (_ episode: Episodes) -> EpisodeListViewModel {
+        
         let title = episode.title
         let date = episode.date
         let imageUrl = episode.smallImageUrl
+        let largeImage = episode.imageUrl
+        let description = episode.description
         
-        return EpisodeListViewModel(title: title, date: date, description: "", imageUrl: imageUrl)
+        return EpisodeListViewModel(title: title, date: date, description: description, imageUrl: imageUrl, largeImage: largeImage)
     }
     
     private func configureFetchedEpisodes(_ episodes: [Episodes]){
+        
+        self.episodes = episodes
         
         var vms = [EpisodeListViewModel]()
         for episode in episodes {
             vms.append(self.createCellViewModel(episode))
         }
         self.cellViewModels = vms
+    }
+}
+
+extension MyBlissViewModel{
+    
+    func userPressed( at indexPath: IndexPath ){
+        self.selectedEpisode = self.episodes [indexPath.row]
     }
     
 }
@@ -72,6 +86,7 @@ struct EpisodeListViewModel {
     let date: String
     let description: String
     let imageUrl: String
+    let largeImage: String
 }
 
 extension UIImageView {

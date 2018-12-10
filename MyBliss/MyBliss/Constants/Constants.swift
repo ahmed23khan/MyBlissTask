@@ -16,3 +16,7 @@ struct ErrorConstants {
 struct UrlConstants {
     static let BaseUrl = "http://apidev.mybliss.ai/api/v1/dummy?page="
 }
+
+struct StoryBoardConstants {
+    static let SegueConstant = "DetailViewSegueIdentifier"
+}
