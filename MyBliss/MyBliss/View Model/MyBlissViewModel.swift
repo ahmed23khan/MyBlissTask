@@ -17,9 +17,19 @@ class MyBlissViewModel {
     var reloadTableViewClosure: (()->())?
     
     var isAllowSegue: Bool = false
+    
+    var numberOfCells: Int {
+        return cellViewModels.count
+    }
+    
+    private var cellViewModels: [EpisodeListViewModel] = [EpisodeListViewModel]() {
+        didSet {
+            self.reloadTableViewClosure?()
+        }
+    }
 
     
-    init( apiService: APIServiceProtocol = MyBlissManager()) {
+    init(apiService: APIServiceProtocol = MyBlissManager()) {
         self.apiService = apiService
     }
     
@@ -34,8 +44,24 @@ class MyBlissViewModel {
         }
     }
     
+    func getCellViewModel( at indexPath: IndexPath ) -> EpisodeListViewModel {
+        return cellViewModels[indexPath.row]
+    }
+    
+    func createCellViewModel (_ episode: Episodes) -> EpisodeListViewModel {
+        let title = episode.title
+        let description = episode.description
+        
+        return EpisodeListViewModel(title: title, subtitle: "", description: description, imageUrl: "")
+    }
+    
     private func configureFetchedEpisodes(_ episodes: [Episodes]){
         
+        var vms = [EpisodeListViewModel]()
+        for episode in episodes {
+            vms.append(self.createCellViewModel(episode))
+        }
+        self.cellViewModels = vms
     }
     
 }

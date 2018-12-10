@@ -52,13 +52,16 @@ class MyBlissViewController: UIViewController {
 extension MyBlissViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.numberOfCells
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell : MyBlissTableViewCell = tableView.dequeueReusableCell(withIdentifier: MyBlissTableViewCell.identifier, for: indexPath) as! MyBlissTableViewCell
-        cell.textLabel?.text = "Some Text"
+        
+        let cellViewModel = viewModel.getCellViewModel(at: indexPath)
+        cell.titleLabel.text = cellViewModel.title
+        cell.descriptionLabel.text = cellViewModel.description
         return cell
         
     }
@@ -66,5 +69,9 @@ extension MyBlissViewController: UITableViewDataSource {
 }
 
 extension MyBlissViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200.0
+    }
     
 }
