@@ -24,38 +24,24 @@
                 <rect key="frame" x="0.0" y="0.0" width="377" height="124.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EzL-LU-Di9">
-                        <rect key="frame" x="7" y="10.5" width="137" height="104"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="104" id="rB9-S2-rwx"/>
-                            <constraint firstAttribute="width" constant="137" id="wn5-rv-KyB"/>
-                        </constraints>
-                    </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="EWb-7h-pLe">
-                        <rect key="frame" x="152" y="10" width="215" height="103"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AnD-ed-TpY">
+                        <rect key="frame" x="152" y="10.5" width="215" height="104"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpb-v6-gyO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpb-v6-gyO">
                                 <rect key="frame" x="0.0" y="0.0" width="215" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" priority="750" constant="215" id="ahV-7V-lhQ"/>
                                     <constraint firstAttribute="height" constant="29" id="dQK-12-wut"/>
                                 </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Label">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            <integer key="NSUnderline" value="1"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNz-Dh-vaq">
-                                <rect key="frame" x="0.0" y="74" width="215" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Z8-2I-4Nk">
+                                <rect key="frame" x="0.0" y="37" width="215" height="67"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" priority="750" constant="29" id="8yW-l8-W4T"/>
-                                    <constraint firstAttribute="width" priority="750" constant="215" id="HC1-Qy-Nia"/>
+                                    <constraint firstAttribute="width" priority="750" constant="215" id="hle-wt-Hmw"/>
+                                    <constraint firstAttribute="height" constant="67" id="jR9-Vh-b6H"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -63,19 +49,25 @@
                             </label>
                         </subviews>
                     </stackView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EzL-LU-Di9">
+                        <rect key="frame" x="7" y="10.5" width="137" height="104"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="137" id="8yG-Kv-gCR"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="EWb-7h-pLe" secondAttribute="bottom" constant="11.5" id="Cei-Bn-DLC"/>
-                    <constraint firstItem="EWb-7h-pLe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="DCm-P6-Tiz"/>
-                    <constraint firstAttribute="trailing" secondItem="EWb-7h-pLe" secondAttribute="trailing" constant="10" id="XUa-Hk-QO1"/>
-                    <constraint firstItem="EWb-7h-pLe" firstAttribute="leading" secondItem="EzL-LU-Di9" secondAttribute="trailing" constant="8" id="Ymy-vr-hbf"/>
+                    <constraint firstItem="AnD-ed-TpY" firstAttribute="leading" secondItem="EzL-LU-Di9" secondAttribute="trailing" constant="8" symbolic="YES" id="0co-tT-hXe"/>
+                    <constraint firstItem="EzL-LU-Di9" firstAttribute="top" secondItem="AnD-ed-TpY" secondAttribute="top" id="5Xo-8P-Ffi"/>
+                    <constraint firstItem="EzL-LU-Di9" firstAttribute="bottom" secondItem="AnD-ed-TpY" secondAttribute="bottom" id="j5V-gh-5tU"/>
+                    <constraint firstAttribute="trailing" secondItem="AnD-ed-TpY" secondAttribute="trailing" constant="10" id="kIH-gN-wmN"/>
                     <constraint firstItem="EzL-LU-Di9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="l5f-f2-fuR"/>
                     <constraint firstItem="EzL-LU-Di9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="xfk-X7-xwu"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="dateLabel" destination="qNz-Dh-vaq" id="QQU-Kf-9hq"/>
+                <outlet property="descriptionLabel" destination="6Z8-2I-4Nk" id="45f-Yk-9he"/>
                 <outlet property="smallImage" destination="EzL-LU-Di9" id="8xd-yt-2vA"/>
                 <outlet property="titleLabel" destination="gpb-v6-gyO" id="ew3-ML-7LO"/>
             </connections>

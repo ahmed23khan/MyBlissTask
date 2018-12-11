@@ -12,11 +12,21 @@ class MyBlissTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var smallImage: UIImageView!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    override func updateConstraints() {
+        super.updateConstraints()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.smallImage.layer.cornerRadius = 50
+        self.smallImage.clipsToBounds = true
     }
     
     static var nib: UINib {

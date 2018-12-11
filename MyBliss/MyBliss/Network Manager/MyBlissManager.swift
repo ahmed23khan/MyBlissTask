@@ -14,10 +14,12 @@ protocol APIServiceProtocol {
 
 class MyBlissManager:APIServiceProtocol {
     
+    // Singleton Class to Network Transcations.
     static let defaultManager = MyBlissManager()
     
     typealias episodesCompletion = (_ episodes: [Episodes]?, _ error: Error?)->()
     
+    // Method to fetch Episodes.
     func fetchData(completionHandler:@escaping episodesCompletion){
         let url = URL(string: BlissAPI.fetchEpisodesAPI(page: 1))
         if let url = url {

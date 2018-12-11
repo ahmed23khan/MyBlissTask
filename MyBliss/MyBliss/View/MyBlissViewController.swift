@@ -14,7 +14,7 @@ class MyBlissViewController: UIViewController {
     
     // Refresh Controller
     var refreshControl: UIRefreshControl!
-    
+    // View Model Instance.
     lazy var viewModel: MyBlissViewModel = {
         return MyBlissViewModel()
     }()
@@ -55,6 +55,7 @@ class MyBlissViewController: UIViewController {
         viewModel.initFetch()
     }
     
+    // Method to register NIBs.
     func registerNibs(){
         self.tableView.register(MyBlissTableViewCell.nib, forCellReuseIdentifier: MyBlissTableViewCell.identifier)
     }
@@ -72,7 +73,8 @@ class MyBlissViewController: UIViewController {
 }
 
 extension MyBlissViewController: UITableViewDataSource {
-    
+    // MARK: - TableView Datasource.
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfCells
     }
@@ -83,7 +85,7 @@ extension MyBlissViewController: UITableViewDataSource {
         
         let cellViewModel = viewModel.getCellViewModel(at: indexPath)
         cell.titleLabel.text = cellViewModel.title
-        cell.dateLabel.text = cellViewModel.date
+        cell.descriptionLabel.text = cellViewModel.description
         cell.smallImage.loadImage(url: URL(string: cellViewModel.imageUrl)!)
         return cell
         
@@ -92,9 +94,10 @@ extension MyBlissViewController: UITableViewDataSource {
 }
 
 extension MyBlissViewController: UITableViewDelegate {
-    
+    // MARK: - TableView Delegate.
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200.0
+        return 150.0
     }
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {

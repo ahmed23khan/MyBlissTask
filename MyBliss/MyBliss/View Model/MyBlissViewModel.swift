@@ -13,11 +13,11 @@ class MyBlissViewModel {
     let apiService: APIServiceProtocol
     
     private var episodes: [Episodes] = [Episodes]()
-
+    
+    // Call back to refresh TableView.
     var reloadTableViewClosure: (()->())?
-    
-    var isAllowSegue: Bool = false
-    
+
+    // Fetch cell count.
     var numberOfCells: Int {
         return cellViewModels.count
     }
@@ -29,12 +29,13 @@ class MyBlissViewModel {
             self.reloadTableViewClosure?()
         }
     }
-
+    
     
     init(apiService: APIServiceProtocol = MyBlissManager()) {
         self.apiService = apiService
     }
     
+    // Method to fetch episodes.
     func initFetch(){
         apiService.fetchData { [weak self] (episodes, error) in
             
@@ -50,6 +51,7 @@ class MyBlissViewModel {
         return cellViewModels[indexPath.row]
     }
     
+    // Configure Cell View Model.
     func createCellViewModel (_ episode: Episodes) -> EpisodeListViewModel {
         
         let title = episode.title
@@ -61,6 +63,7 @@ class MyBlissViewModel {
         return EpisodeListViewModel(title: title, date: date, description: description, imageUrl: imageUrl, largeImage: largeImage)
     }
     
+    // Configure Episodes.
     private func configureFetchedEpisodes(_ episodes: [Episodes]){
         
         self.episodes = episodes
@@ -75,6 +78,7 @@ class MyBlissViewModel {
 
 extension MyBlissViewModel{
     
+    // Handle user interactions.
     func userPressed( at indexPath: IndexPath ){
         self.selectedEpisode = self.episodes [indexPath.row]
     }
@@ -90,6 +94,7 @@ struct EpisodeListViewModel {
 }
 
 extension UIImageView {
+    // Mehtod to fetch images from image urls.
     func loadImage(url: URL) {
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: url) {
