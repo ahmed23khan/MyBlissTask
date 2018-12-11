@@ -20,3 +20,7 @@ struct UrlConstants {
 struct StoryBoardConstants {
     static let SegueConstant = "DetailViewSegueIdentifier"
 }
+
+struct PlaceHolder {
+    static let PullRefresh = "Pull to refresh"
+}

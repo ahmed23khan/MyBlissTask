@@ -12,6 +12,9 @@ class MyBlissViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    // Refresh Controller
+    var refreshControl: UIRefreshControl!
+    
     lazy var viewModel: MyBlissViewModel = {
         return MyBlissViewModel()
     }()
@@ -26,9 +29,17 @@ class MyBlissViewController: UIViewController {
     
     func initialUiSetUp(){
         self.registerNibs()
+        // Configure Referesh Control.
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: PlaceHolder.PullRefresh)
+        refreshControl.addTarget(self, action: #selector(initialiseViewModel), for: .valueChanged)
+        self.tableView.addSubview(refreshControl)
     }
     
-    func initialiseViewModel(){
+    @objc func initialiseViewModel(){
+        if(self.refreshControl.isRefreshing) {
+            self.refreshControl.endRefreshing()
+        }
         // Native Binding View with View Model.
         viewModel.reloadTableViewClosure = { [weak self] () in
             
