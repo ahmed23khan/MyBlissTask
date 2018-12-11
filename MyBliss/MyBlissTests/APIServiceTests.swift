@@ -24,7 +24,7 @@ class APIServiceTests: XCTestCase {
         super.tearDown()
     }
 
-    func test_fetch_popular_photos() {
+    func test_fetch_episodes() {
         
         // Given A apiservice
         let sut = self.sut!

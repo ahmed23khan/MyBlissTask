@@ -22,6 +22,7 @@
 		968D678121BD883A00507956 /* MyBlissTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968D677F21BD883900507956 /* MyBlissTableViewCell.xib */; };
 		968D678321BEA7D400507956 /* MyBlissDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D678221BEA7D400507956 /* MyBlissDetailViewController.swift */; };
 		968D678521BFAF0400507956 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D678421BFAF0400507956 /* APIServiceTests.swift */; };
+		968D678721BFB47E00507956 /* MyBlissViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D678621BFB47E00507956 /* MyBlissViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		968D677F21BD883900507956 /* MyBlissTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBlissTableViewCell.xib; sourceTree = "<group>"; };
 		968D678221BEA7D400507956 /* MyBlissDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlissDetailViewController.swift; sourceTree = "<group>"; };
 		968D678421BFAF0400507956 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
+		968D678621BFB47E00507956 /* MyBlissViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlissViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				968D676221BD59BD00507956 /* MyBlissTests.swift */,
 				968D678421BFAF0400507956 /* APIServiceTests.swift */,
 				968D676421BD59BD00507956 /* Info.plist */,
+				968D678621BFB47E00507956 /* MyBlissViewModelTests.swift */,
 			);
 			path = MyBlissTests;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				968D678521BFAF0400507956 /* APIServiceTests.swift in Sources */,
+				968D678721BFB47E00507956 /* MyBlissViewModelTests.swift in Sources */,
 				968D676321BD59BD00507956 /* MyBlissTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
