@@ -26,7 +26,7 @@ class MyBlissDetailViewController: UIViewController {
     
     func initialUiSetUp(){
         if let imageUrl = largeUrl, let episodeDescription = descriptionText, let imageURL =  URL(string: imageUrl) {
-            self.descriptionLabel.text = episodeDescription
+            self.descriptionLabel.text = LabelConstants.EpisodeDescription + episodeDescription
             self.largeImageView.loadImage(url: imageURL)
         }
     }

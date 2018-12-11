@@ -24,3 +24,7 @@ struct StoryBoardConstants {
 struct PlaceHolder {
     static let PullRefresh = "Pull to refresh"
 }
+
+struct LabelConstants {
+    static let EpisodeDescription =  "Episode Description:" + "\n"  + "\n"
+}
